@@ -1,33 +1,30 @@
-# MathJax
+# mathjax-minimal
 
-## Beautiful math in all browsers
+This is a massively stripped down version of MathJax, primarily for use
+as a bower package. It reduces install time by a factor of 10,
+and file size by a factor of 100.
 
-MathJax is an open-source JavaScript display engine for LaTeX, MathML, and
-AsciiMath notation that works in all modern browsers.  It was designed with
-the goal of consolidating the recent advances in web technologies into a
-single, definitive, math-on-the-web platform supporting the major browsers
-and operating systems.  It requires no setup on the part of the user (no
-plugins to download or software to install), so the page author can write
-web documents that include mathematics and be confident that users will be
-able to view it naturally and easily.  Simply include MathJax and some
-mathematics in a web page, and MathJax does the rest.
+This only provides support for
++ English
++ TeX Input
++ HTML-CSS Output
+ + STIX Font (woff)
 
-Some of the main features of MathJax include:
+You will need to provide your own configuration file. It should probably
+include these settings:
 
-- High-quality display of LaTeX, MathML, and AsciiMath notation in HTML pages
-
-- Supported in most browsers with no plug-ins, extra fonts, or special
-  setup for the reader
-
-- Easy for authors, flexible for publishers, extensible for developers
-
-- Supports math accessibility, cut-and-paste interoperability, and other
-  advanced functionality
-
-- Powerful API for integration with other web applications
-
-See <http://www.mathjax.org/> for additional details.
-
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["STIX"],
+                  preferredFont: 'STIX',
+                  webFont: 'STIX-Web',
+                  imageFont: null
+                 },
 
 ## Installation and Usage
 

@@ -6,7 +6,17 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "components"
+    "components",
+    "unpacked",
+    "test",
+    "docs",
+    "config",
+    "localization",
+    "fonts/HTML-CSS/!(STIX-Web)",
+    "fonts/HTML-CSS/STIX-Web/!(woff)",
+    "jax/output/!(HTML-CSS)",
+    "jax/output/HTML-CSS/fonts/!(STIX)",
+    "jax/input/!(TeX)"
   ],
   "keywords": ["math", "js", "LaTeX", "MathML", "AsciiMath"]
 }
