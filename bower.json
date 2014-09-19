@@ -14,7 +14,7 @@
     "localization",
     "fonts",
     "jax/output/!(HTML-CSS)",
-    "jax/output/HTML-CSS/fonts/!(STIX)/",
+    "jax/output/HTML-CSS/fonts/!(STIX\)",
     "jax/input/!(TeX)"
   ],
   "keywords": ["math", "js", "LaTeX", "MathML", "AsciiMath"]
